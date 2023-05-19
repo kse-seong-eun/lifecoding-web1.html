@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>메서드</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <div>[배열]이 순서가 있는 원소의 집합이라면 {객체}는 순서가 없는 집합!</div>
+    <div>생활코딩 에디터 파일에서 코드 확인</div>
+
+    <h2>오브젝트 생성문법 Create</h2>
+    <script>
+      // 객체 생성법!!!
+      var coworkers = {
+        programmer: "kse",
+        designer: "kim",
+      };
+      // 객체 데이터 가져오는 법!!!
+      document.write("programmer : " + coworkers.programmer + "<br>");
+      document.write("designer : " + coworkers.designer + "<br>");
+      // 객체에 데이터 넣는 법!!! (1)
+      coworkers.bookkeeper = "chu";
+      document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+      // 객체에 데이터 넣는 법!!! (2)
+      //띄어쓰기가 있는 경우! .점 대신에 []대괄호 사용!
+      coworkers["data scientist"] = "nara";
+      document.write(
+        "data scientist : " + coworkers["data scientist"] + "<br>"
+      );
+    </script>
+
+    <h2>오브젝트 원소 조회(순회) interate</h2>
+    <script>
+      // 반복문 - key 값을 조회해서 찾는다!!!
+      // TMI) 배열에서는 순차적으로 정리되어 있기때문에 key라고 안하고 index라고 함!!!
+      for (var key in coworkers) {
+        // document.write(key +'<br>')
+        // document.write(coworkers[key] +'<br>')
+        document.write(key + " : " + coworkers[key] + "<br>");
+      }
+    </script>
+
+    <h2>오브젝트에 함수 담기! Property & Mothod</h2>
+    <!-- 객체(오브젝트)에 소속된 함수 : Method  //  ex. showAll() -->
+    <!-- 객체(오브젝트)에 소속된 변수 : Property // ex. "programmer", "designer", bookkeeper -->
+    <script>
+      //    coworkers.showAll = function(){ } 인즉 function showAll(){ }과 같은 말!!!
+      //    또는   var showAll = function(){ }     이것과도 같은 표현!!!
+      coworkers.showAll = function () {
+        for (var key in this) {
+          document.write(key + " : " + this[key] + "<br>");
+        }
+      };
+      coworkers.showAll();
+    </script>
+  </body>
+</html>

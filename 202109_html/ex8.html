@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>반복과 배열</title>
+  </head>
+
+  <body>
+    <h1>Loop & Array</h1>
+    <script>
+      //변수         배열     0         1         2         3         4      5 add Data
+      var coworkers = [ "egoing","seongeun","suckhyun","ji eun","da hyun","happy",];
+
+    </script>
+    <h2>Co coworkers</h2>
+    <!-- 예시 1) 변수의 배열 데이터가 바뀌면 아래 코드로직(숫자)도 변경해야함. 불편 -->
+    <ul>
+      <script>
+        var i = 0;
+        while (i < 4) {
+          document.write("<li>" + coworkers[i] + "</li>");
+          // 배열에서 가져오고 싶은 값은 [대괄호]로
+          i = i + 1;
+        }
+      </script>
+    </ul>
+    <!-- 예시 2) 탄력적으로 로직이 반응하게 코드 짜기!  -->
+    <ul>
+      <script>
+        var i = 0;
+        while (i < coworkers.length) {
+          document.write("<li>" + coworkers[i] + "</li>");
+          // 배열에서 가져오고 싶은 값은 [대괄호]로
+          i = i + 1;
+        }
+      </script>
+    </ul>
+    <!-- 예시 3) 리스트에 링크 걸기,반복  -->
+    <ul>
+      <script>
+        var i = 0;
+        while (i < coworkers.length) {
+          document.write('<li><a href="">' + coworkers[i] + "</a></li>");
+          // 배열에서 가져오고 싶은 값은 [대괄호]로
+          i = i + 1;
+        }
+      </script>
+    </ul>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html>
 <head>
@@ -15,4 +16,82 @@
 <p style="margin-top:45px;">JS(JavaScript)는 콘텐츠를 바꾸고 움직이는 등 페이지를 동적으로 꾸며주는 역할을 하는 프로그래밍 언어로 웹의 동적 처리를 담당합니다.
 JS는 HTML과 CSS를 동원해서 그들의 업무(구조, 시각적 표현 등)도 담당할 수 있지만, 그들만큼 잘하진 못하기 때문에(성능적으로) 되도록 동적 처리에만 집중해야 합니다.</p>
 </body>
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WEB1 - Javascript</title>
+    <meta charset="utf-8" />
+    <script src="colors.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+    <input
+      id="Night_Day"
+      type="button"
+      value="Night"
+      onclick="nightDayHandler(this);"
+    >
+    <div id="grid">
+      <ol>
+        <li><a href="test01.html">HTML</a></li>
+        <li><a href="test02.html">CSS</a></li>
+        <li><a href="test03.html">Javascript</a></li>
+      </ol>
+    </div>  
+    <div id="article">      
+      <h2>Javascript</h2>
+      <p>
+        JS(JavaScript)는 콘텐츠를 바꾸고 움직이는 등 페이지를 동적으로 꾸며주는
+        역할을 하는 프로그래밍 언어로 웹의 동적 처리를 담당합니다. JS는 HTML과
+        CSS를 동원해서 그들의 업무(구조, 시각적 표현 등)도 담당할 수 있지만,
+        그들만큼 잘하진 못하기 때문에(성능적으로) 되도록 동적 처리에만 집중해야
+        합니다.
+      </p>
+    </div>  
+    <!-- </div> -->
+
+    <!-- 1️⃣원본   -->
+    <!-- <input id="Night_Day" type="button" value="Night" onclick="
+        var target = document.querySelector('body');
+        if (document.querySelector('#Night_Day').value === 'Night'){
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          this.value = 'Day';
+        } else {
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+          this.value = 'Night';
+        }
+      "> -->
+
+    <!--2️⃣ Refactoring을 잘 활용해야한다!! 코드의 효율성! 자기 자신을 가르키므로 this!! -->
+    <!-- <input type="button" value="Night" onclick="
+      if (this.value === 'Night'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'Day';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'Night';
+      }
+    "> -->
+
+    <!-- 3️⃣반복되는 코드 제거!!! 변수var 지정해 반복되는 선택자 간소화 -->
+    <!-- <input id="Night_Day" type="button" value="Night" onclick="
+        var target = document.querySelector('body');
+        if (this.value === 'Night'){
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          this.value = 'Day';
+        } else {
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+          this.value = 'Night';
+        }
+      "/> -->
+  </body>
+>>>>>>> 557131a (생활코딩딩study예제)
 </html>
